@@ -52,6 +52,11 @@ function App() {
       return alert('Escolha um arquivo!')
     }
   }
+
+  const deletar = async (escreva:string) =>{
+    await Photos.destroy(escreva)
+    getPhotos()
+  }
   
 
   return (
@@ -77,7 +82,7 @@ function App() {
         {!loading && photos.length>0 &&
         <C.PhotoList>
           {photos.map((item,index)=>(
-            <PhotoItem key={index} url = {item.url} name = {item.name}/>
+            <PhotoItem key={index} url = {item.url} name = {item.name} deletar = {deletar}/>
           ))
           }
         </C.PhotoList>
