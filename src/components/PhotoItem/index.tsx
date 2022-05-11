@@ -1,5 +1,4 @@
 import * as C from './style'
-import {Photo} from '../../types/Photos'
 import {useState} from 'react'
 
 type Props = {
