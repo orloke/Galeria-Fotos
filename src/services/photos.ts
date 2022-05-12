@@ -36,3 +36,10 @@ export const destroy = async (name:string) => {
     const fileDelete = ref(storage, `images/${name}`)
     await deleteObject(fileDelete)
 }
+
+export const DownloadPhoto = async (name:string)=>{
+    const down = ref(storage,`images/${name}`)
+    const tetes = await getDownloadURL(down)
+    console.log(tetes);
+    
+}

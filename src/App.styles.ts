@@ -33,7 +33,7 @@ export const PhotoList = styled.div`
 
     @media screen and (max-width: 600px) {
         grid-template-columns: repeat(3, 1fr);
-      }
+    }
 `
 export const UploadForm = styled.form`
     background-color: #3d3f43;
@@ -63,9 +63,23 @@ export const UploadForm = styled.form`
     }
 
     input[type=file]{
-        width: 50%;
+        width: 100%;
         padding: 14px 16px;
         border-radius: 10px;
         background-color: #1c1c1e6b;
+    }
+
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        gap: 10px;
+
+        div{
+            width: 100%;
+            align-items: center;
+        }
+        input[type=submit]{
+            width: 50%;
+            margin: 0 auto;
+        }
     }
 `

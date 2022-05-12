@@ -19,10 +19,30 @@ export const Container = styled.div`
     p{
         margin-top: 0px;
     }
+
+    @media screen and (max-width: 600px){
+        p{
+            font-size: 13px;
+        }
+    }
 `
 
 export const Button = styled.button`
     background-color: #f45936;
+    border: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:hover{
+        opacity: 0.7;
+    }
+`
+
+export const ButtonDownload = styled.button`
+    background-color: #8ec454;
+    margin-top: 6%;
     border: none;
     color: #fff;
     padding: 8px 16px;

@@ -4,7 +4,7 @@ import {useState} from 'react'
 type Props = {
     url: string,
     name: string,
-    deletar: (escreva:string)=> void
+    deletar: (escreva:string)=> void,
 }
 
 export const PhotoItem = ({url, name, deletar}: Props) =>{
@@ -16,7 +16,10 @@ export const PhotoItem = ({url, name, deletar}: Props) =>{
     return(
         <C.Container>
             <div>
-                <img src= {url} alt={name} />
+                <a href= {url} target = '_blank' rel='noreferrer'>
+                    <img src= {url} alt={name} />
+                </a>
+                
                 <p>{name}</p>
             </div>
 
